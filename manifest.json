@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "TwiCopia",
+  "version": "1.1",
+  "description": "TwitterのタイムラインにツイートやURLをコピーするボタンを追加します。ダークテーマに対応しました。",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://x.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon1.png","success.png","icon2.png"],
+      "matches": ["https://x.com/*"]
+    }
+  ],
+  "icons": {
+    "256": "./icon1.png"
+  }
+}
