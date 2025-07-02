@@ -17,8 +17,9 @@ function addCopyButtons() {
     copyTextButton.style.width = "35px";
     copyTextButton.style.height = "35px";
     copyTextButton.style.cursor = "pointer";
-    copyTextButton.style.position = "relative";
-    copyTextButton.style.top = "3px";
+    copyTextButton.style.verticalAlign = "middle";
+    copyTextButton.style.position = "static";
+    copyTextButton.style.top = "";
     copyTextButton.style.zIndex = "10";
 
     copyTextButton.addEventListener("click", (event) => {
@@ -46,8 +47,9 @@ function addCopyButtons() {
     urlButton.style.width = "35px";
     urlButton.style.height = "35px";
     urlButton.style.cursor = "pointer";
-    urlButton.style.position = "relative";
-    urlButton.style.top = "3px";
+    urlButton.style.verticalAlign = "middle";
+    urlButton.style.position = "static";
+    urlButton.style.top = "";
     urlButton.style.zIndex = "10";
 
     function updateDropdownStyle(dropdown) {
@@ -60,8 +62,8 @@ function addCopyButtons() {
     const dropdown = document.createElement("div");
     dropdown.style.display = "none";
     dropdown.style.position = "absolute";
-    dropdown.style.bottom = "45px";
-    dropdown.style.left = "0";
+    dropdown.style.bottom = "40px";
+    dropdown.style.right = "0px";
     dropdown.style.borderRadius = "4px";
     dropdown.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.2)";
     dropdown.style.zIndex = "20";
@@ -128,8 +130,9 @@ function addCopyButtons() {
     const actionArea = tweet.querySelector("[role='group']");
     if (actionArea) {
       const container = document.createElement("div");
-      container.style.position = "relative";
-      container.style.display = "inline-block";
+      container.style.display = "flex";
+      container.style.alignItems = "center";
+      container.style.marginLeft = "8px";
 
       container.appendChild(copyTextButton);
       container.appendChild(urlButton);
