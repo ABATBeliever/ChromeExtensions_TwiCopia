@@ -1,6 +1,6 @@
 ## TwiCopia Chrome拡張
 ![License](https://img.shields.io/badge/license-MPL-blue.svg)
-![Version](https://img.shields.io/badge/version-1.2-green.svg)
+![Version](https://img.shields.io/badge/version-1.3-green.svg)
 ![Version](https://img.shields.io/badge/Language-JS-yellow.svg)
 
 TwiCopiaは、TwitterのタイムラインにツイートやURLをコピーするボタンを追加します。
@@ -11,9 +11,7 @@ TwiCopiaは、TwitterのタイムラインにツイートやURLをコピーす�
 ・ツイートをコピーするボタン
 
 ・ツイートのURLをプレーン/Discord向けfxtwitter形式でコピーするボタン
-
 ・Twitterやブラウザのダークテーマへの対応
-
 ・広告なし、オープンソース(MPL)
 
-最新バージョン:1.2
+最新バージョン:1.3

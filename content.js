@@ -6,7 +6,8 @@ function addCopyButtons() {
 
     const tweetLinkElement = tweet.querySelector("a[href*='/status/']");
     if (!tweetLinkElement) return;
-    const tweetURL = tweetLinkElement.href;
+    let tweetURL = tweetLinkElement.href;
+    tweetURL = tweetURL.replace(/\/status\/(\d+)\/(photo|video)\/\d+$/, '/status/$1');
 
     const copyTextButton = document.createElement("img");
     copyTextButton.src = chrome.runtime.getURL("icon1.png");
@@ -35,7 +36,7 @@ function addCopyButtons() {
             copyTextButton.src = chrome.runtime.getURL("icon1.png");
           }, 1000);
         })
-        .catch(err => console.error("TwiCopia-Error COMMAND1:", err));
+        .catch(err => console.error("TwiCopia-Error FAILED-TO-COPY-TEXT: ", err));
     });
 
     const urlButton = document.createElement("img");
@@ -85,9 +86,10 @@ function addCopyButtons() {
           normalURL.textContent = "done.";
           setTimeout(() => {
             normalURL.textContent = "Normal";
+            dropdown.style.display = 'none'; 
           }, 1000);
         })
-        .catch(err => console.error("TwiCopia-Error COMMAND2-1:", err));
+        .catch(err => console.error("TwiCopia-Error FAILED-TO-COPY-RAW-LINK: ", err));
     });
 
     const discordURL = document.createElement("div");
@@ -102,9 +104,10 @@ function addCopyButtons() {
           discordURL.textContent = "done.";
           setTimeout(() => {
             discordURL.textContent = "Discord";
+            dropdown.style.display = 'none'; 
           }, 1000);
         })
-        .catch(err => console.error("TwiCopia-Error COMMAND2-2:", err));
+        .catch(err => console.error("TwiCopia-Error FAILED-TO-COPY-FXTWITTER-LINK: ", err));
     });
 
     [normalURL, discordURL].forEach(option => {
