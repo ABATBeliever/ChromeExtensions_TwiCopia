@@ -24,5 +24,9 @@
     "gecko": {
       "id": "twicopia-firefox@abatbeliever.net"
     }
+  },
+  "data_collection_permissions": {
+    "collects_user_data": false,
+    "collects_technical_data": false
   }
 }
