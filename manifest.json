@@ -22,11 +22,10 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "twicopia-firefox@abatbeliever.net"
+      "id": "twicopia-firefox@abatbeliever.net",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
-  },
-  "data_collection_permissions": {
-    "collects_user_data": false,
-    "collects_technical_data": false
   }
 }
