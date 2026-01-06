@@ -10,7 +10,7 @@ function addCopyButtons() {
     tweetURL = tweetURL.replace(/\/status\/(\d+)\/(photo|video)\/\d+$/, '/status/$1');
 
     const copyTextButton = document.createElement("img");
-    copyTextButton.src = chrome.runtime.getURL("icon1.png");
+    copyTextButton.src = browser.runtime.getURL("icon1.png");
     copyTextButton.alt = "Copy Tweet Text";
     copyTextButton.className = "copy-tweet-button";
 
@@ -31,16 +31,16 @@ function addCopyButtons() {
 
       navigator.clipboard.writeText(tweetText)
         .then(() => {
-          copyTextButton.src = chrome.runtime.getURL("success.png");
+          copyTextButton.src = browser.runtime.getURL("success.png");
           setTimeout(() => {
-            copyTextButton.src = chrome.runtime.getURL("icon1.png");
+            copyTextButton.src = browser.runtime.getURL("icon1.png");
           }, 1000);
         })
         .catch(err => console.error("TwiCopia-Error FAILED-TO-COPY-TEXT: ", err));
     });
 
     const urlButton = document.createElement("img");
-    urlButton.src = chrome.runtime.getURL("icon2.png");
+    urlButton.src = browser.runtime.getURL("icon2.png");
     urlButton.alt = "Get URL";
     urlButton.className = "url-tweet-button";
 

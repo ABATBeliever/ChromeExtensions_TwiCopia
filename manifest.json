@@ -19,5 +19,10 @@
   ],
   "icons": {
     "256": "./icon1.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "twicopia-firefox@abatbeliever.net"
+    }
   }
 }

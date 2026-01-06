@@ -5,6 +5,8 @@
 
 TwiCopiaは、TwitterのタイムラインにツイートやURLをコピーするボタンを追加します。
 
+これはFirefox向け版で、若干の変更があります。
+
 ![スクリーンショット 2024-12-30 220458](https://github.com/user-attachments/assets/941cd424-5713-4d10-b9d5-241052f1930c)
 
 
